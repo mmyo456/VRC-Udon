@@ -1,4 +1,4 @@
-﻿using UdonSharp;
+using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
@@ -6,10 +6,16 @@ using VRC.Udon;
 
 public class AnimationController : UdonSharpBehaviour
 {
+    [Header("鸭鸭讨厌Bug!!!")]
+    
+    [Header("要移动的层级")]
     public Transform targetTransform;  // 要控制的对象的 Transform 组件
     public AnimationCurve curve;  // 动画曲线
+    [Header("持续时间")]
     public float duration = 1f;  // 动画持续时间
+    [Header("初始位置")]
     public Vector3 startPosition;  // 初始位置
+    [Header("结束位置")]
     public Vector3 endPosition;  // 结束位置
 
     private float timer = 0f;  // 记录动画已经播放的时间
